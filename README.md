@@ -3,9 +3,8 @@ This is my phone book, made for homework at university
 
 Method hierarchy:
 - add - adding new contact
-  - 'firstname';'lastname';'mobile_phone';'birthday'
+  - 'firstname';'lastname';'mobile_phone';'birthday' (birthday should be in format yyyy-mm-dd)
   - 'firstname';'lastname';'mobile_phone'
-  (birthday should be in format yyyy-mm-dd)
   - exit - exiting add-mode
 - show - show all records and editing them
   - edit 'index' - editing chosen contact
@@ -15,9 +14,8 @@ Method hierarchy:
     - exit - exiting from edit-mode
   - exit - exiting edit and viewing mode- find - show records matching the conditions
 - find - show records matching the conditions
-  - field=value
+  - field=value (fields should be snake_case)
   - field_1=value_1;field=2=value_2
-  (fields should be snake_case)
   - exit - ending search
 - age - working with contacts' age
   - show - printing contacts by birthday
