@@ -60,7 +60,7 @@ def find():
     print(Messages.TABLE_TITLE)
     data = input()
     if data == Messages.COMMAND_EXIT:
-        print(Messages)
+        print(Messages.METHOD_FIND_BYE_MESSAGE)
     else:
         key_value_pairs = data.split(';')
         criteria = {pair.split('=')[0]: pair.split('=')[1] for pair in key_value_pairs}
