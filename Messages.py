@@ -75,7 +75,7 @@ Syntax:
 (fields should be snake_case)
 - exit - ending search'''
 
-    RECORDS_WAS_NOT_FIND = 'Records were not found'
+    RECORDS_WAS_NOT_FOUND = 'Records were not found'
 
     METHOD_FIND_BYE_MESSAGE = 'Ok. You are exiting search-mode'
 

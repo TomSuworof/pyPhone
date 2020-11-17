@@ -43,10 +43,8 @@ def show_with_birthday(contacts: list):
         print(f'- {contact.firstname} {contact.lastname}, {contact.birthday.day} {calendar.month_abbr[contact.birthday.month]}')
 
 
-def show_age_matched(condition: str):
+def get_age_matched(condition: str, years: int) -> list:
     contacts = get_list_of_contacts()
-    years = int(condition[1:])
-    condition = condition[0]
     today = datetime.date.today()
     if condition == '<':
         contacts = list(filter(lambda contact: (today - contact.birthday).days // 365 < years, contacts))
@@ -54,10 +52,17 @@ def show_age_matched(condition: str):
         contacts = list(filter(lambda contact: (today - contact.birthday).days // 365 > years, contacts))
     elif condition == '=':
         contacts = list(filter(lambda contact: (today - contact.birthday).days // 365 == years, contacts))
+    return contacts
+
+
+def show_age_matched(condition: str):
+    years = int(condition[1:])
+    condition = condition[0]
+    contacts = get_age_matched(condition, years)
+    if len(contacts) > 0:
+        show_with_birthday(contacts)
     else:
-        print(Messages.INPUT_INCORRECT)
-    for item in contacts:
-        print(f'- {item.firstname} {item.lastname}, {(today - item.birthday).days // 365}')
+        print(Messages.RECORDS_WAS_NOT_FOUND)
 
 
 def age():

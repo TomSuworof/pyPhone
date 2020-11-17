@@ -50,7 +50,7 @@ def find_by_criteria(criteria: dict) -> list:
         contacts = find_by_birthday(criteria[Messages.FIELD_BIRTHDAY], contacts)
         was_search = True
     if not was_search or len(contacts) == 0:
-        print(Messages.RECORDS_WAS_NOT_FIND)
+        print(Messages.RECORDS_WAS_NOT_FOUND)
     else:
         return contacts
 
