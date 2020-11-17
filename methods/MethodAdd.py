@@ -12,10 +12,10 @@ def add():
     print(Messages.METHOD_ADD_HELLO_MESSAGE)
     contact = Contact()
     input_str = input()
-    if input_str.count(';') < 2:
-        print(Messages.INPUT_INCORRECT)
-    elif input_str == Messages.COMMAND_EXIT:
+    if input_str == Messages.COMMAND_EXIT:
         print(Messages.METHOD_ADD_BYE_MESSAGE)
+    elif input_str.count(';') < 2:
+        print(Messages.INPUT_INCORRECT)
     else:
         data = input_str.split(';')
         data_is_correct = True
