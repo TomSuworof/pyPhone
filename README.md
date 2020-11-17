@@ -1,7 +1,7 @@
 # pyPhone
 This is my phone book, made for homework at university
 
-Methods hierarchy:
+Method hierarchy:
 - add - adding new contact
   - 'firstname';'lastname';'mobile_phone';'birthday'
   - 'firstname';'lastname';'mobile_phone'
