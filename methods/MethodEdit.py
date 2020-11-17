@@ -64,6 +64,6 @@ def edit(index: int):
     elif command == Messages.COMMAND_DELETE:
         delete_record(index)
     elif command == Messages.COMMAND_EXIT:
-        print(Messages.EXITING_EDIT_MODE)
+        pass
     else:
         print(Messages.COMMAND_INVALID)
