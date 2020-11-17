@@ -33,17 +33,21 @@ class Messages:
 Enter info about record. You can choose any type
 - 'firstname';'lastname';'mobile_phone';'birthday'
 - 'firstname';'lastname';'mobile_phone'
-- birthday should be in format yyyy-mm-dd'''
+(birthday should be in format yyyy-mm-dd)
+- exit - exiting add-mode'''
 
     INPUT_INCORRECT = 'Your input is incorrect'
 
     ADDING_CONTACT = 'Adding new contact...'
 
+    METHOD_ADD_BYE_MESSAGE = 'Ok. You are exiting add-mode'
+
     METHOD_SHOW_HELLO_MESSAGE = '''You chose 'show'
 List of your contacts:'''
 
     METHOD_SHOW_COMMANDS_AVAILABLE = '''You can pick one pick 1 record and edit it or continue surfing
-Type 'edit {index}' or 'exit' '''
+- edit 'index' - editing chosen contact
+- exit - exiting edit and viewing mode'''
 
     TABLE_TITLE = '    Index     |  Firstname   |   Lastname   | Mobile phone |  Work phone  |  Home phone  |   Birthday   '
 

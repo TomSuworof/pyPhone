@@ -14,6 +14,8 @@ def add():
     input_str = input()
     if input_str.count(';') < 2:
         print(Messages.INPUT_INCORRECT)
+    elif input_str == Messages.COMMAND_EXIT:
+        print(Messages.METHOD_ADD_BYE_MESSAGE)
     else:
         data = input_str.split(';')
         data_is_correct = True
