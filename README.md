@@ -10,9 +10,8 @@ Method hierarchy:
 - show - show all records and editing them
   - edit 'index' - editing chosen contact
     - set 'field=value' - changing value of the entered field to new value
-    - clear 'field' - clear the entered field
+    - clear 'field' - clear the entered field(name of field should be in snake_case)
     - delete - delete the record
-    (name of field should be in snake_case)
     - exit - exiting from edit-mode
   - exit - exiting edit and viewing mode- find - show records matching the conditions
 - find - show records matching the conditions
