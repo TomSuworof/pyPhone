@@ -4,8 +4,13 @@ from Messages import Messages
 
 def add_new_contact(contact: Contact):
     contacts = get_list_of_contacts()
-    contacts.append(contact)
-    load_contacts_to_file(list(set(contacts)))
+    contacts_dict = {contact.firstname: contact.lastname for contact in contacts}
+    if (contact.firstname.capitalize(), contact.lastname.capitalize()) in contacts_dict.items():
+        return False
+    else:
+        contacts.append(contact)
+        load_contacts_to_file(contacts)
+        return True
 
 
 def add():
@@ -34,7 +39,9 @@ def add():
 
         if data_is_correct:
             print(contact)
-            print(Messages.ADDING_CONTACT)
-            add_new_contact(contact)
+            if add_new_contact(contact):
+                print(Messages.ADDING_CONTACT)
+            else:
+                print(Messages.CONTACT_EXISTS)
         else:
             print(Messages.INPUT_INCORRECT)

@@ -38,6 +38,8 @@ Enter info about record. You can choose any type
 
     INPUT_INCORRECT = 'Your input is incorrect'
 
+    CONTACT_EXISTS = 'Contact with these firstname and lastname already exists'
+
     ADDING_CONTACT = 'Adding new contact...'
 
     METHOD_ADD_BYE_MESSAGE = 'Ok. You are exiting add-mode'
