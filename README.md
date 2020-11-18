@@ -24,3 +24,5 @@ Method hierarchy:
   - show 'firstname;lastname' - getting age of your contact with entered firstname and lastname
   - exit - ending search through age
 - exit - ending work
+
+examples of work: https://clck.ru/Ryepm
