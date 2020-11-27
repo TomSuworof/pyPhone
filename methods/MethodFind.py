@@ -51,6 +51,7 @@ def find_by_criteria(criteria: dict) -> list:
         was_search = True
     if not was_search or len(contacts) == 0:
         print(Messages.RECORDS_WAS_NOT_FOUND)
+        return []
     else:
         return contacts
 
