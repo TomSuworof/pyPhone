@@ -4,25 +4,28 @@ from Messages import Messages
 
 def set_new_value(field: str, new_value: str, index: int):
     contacts = get_list_of_contacts()
-    contact = contacts[index]
-    if field == Messages.FIELD_FIRSTNAME:
-        contact.set_firstname(new_value)
-    elif field == Messages.FIELD_LASTNAME:
-        contact.set_lastname(new_value)
-    elif field == Messages.FIELD_MOBILE_PHONE:
-        contact.set_mobile_phone(new_value)
-    elif field == Messages.FIELD_WORK_PHONE:
-        contact.set_work_phone(new_value)
-    elif field == Messages.FIELD_HOME_PHONE:
-        contact.set_home_phone(new_value)
-    elif field == Messages.FIELD_BIRTHDAY:
-        contact.set_birthday(new_value)
+    if len(contacts) == 0:
+        print(Messages.INDEX_ERROR)
     else:
-        print(Messages.FIELD_NOT_RECOGNIZED)
+        contact = contacts[index]
+        if field == Messages.FIELD_FIRSTNAME:
+            contact.set_firstname(new_value)
+        elif field == Messages.FIELD_LASTNAME:
+            contact.set_lastname(new_value)
+        elif field == Messages.FIELD_MOBILE_PHONE:
+            contact.set_mobile_phone(new_value)
+        elif field == Messages.FIELD_WORK_PHONE:
+            contact.set_work_phone(new_value)
+        elif field == Messages.FIELD_HOME_PHONE:
+            contact.set_home_phone(new_value)
+        elif field == Messages.FIELD_BIRTHDAY:
+            contact.set_birthday(new_value)
+        else:
+            print(Messages.FIELD_NOT_RECOGNIZED)
 
-    print(contact)
-    contacts[index] = contact
-    load_contacts_to_file(contacts)
+        print(contact)
+        contacts[index] = contact
+        load_contacts_to_file(contacts)
 
 
 def clear_field(field: str, index):
