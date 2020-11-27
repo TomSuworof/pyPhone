@@ -108,6 +108,9 @@ class Contact:
         if phone.isalnum() and len(phone) == 11:
             self.mobile_phone = phone
             return True
+        elif len(phone) == 12 and phone.startswith('+7'):
+            phone = phone.replace('+7', '8')
+            return self.set_home_phone(phone)
         else:
             return False
 
@@ -115,6 +118,9 @@ class Contact:
         if phone.isalnum() and len(phone) == 11:
             self.work_phone = phone
             return True
+        elif len(phone) == 12 and phone.startswith('+7'):
+            phone = phone.replace('+7', '8')
+            return self.set_home_phone(phone)
         else:
             return False
 
@@ -122,6 +128,9 @@ class Contact:
         if phone.isalnum() and len(phone) == 11:
             self.home_phone = phone
             return True
+        elif len(phone) == 12 and phone.startswith('+7'):
+            phone = phone.replace('+7', '8')
+            return self.set_home_phone(phone)
         else:
             return False
 
