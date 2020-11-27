@@ -26,3 +26,10 @@ Method hierarchy:
 - exit - ending work
 
 examples of work: https://clck.ru/Ryepm
+
+# How to start
+```
+git clone https://github.com/TomSuworof/pyPhone.git
+python pyPhone/main.py
+```
+may be you should use ```python3 pyPhone/main.py```
