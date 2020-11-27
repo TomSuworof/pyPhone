@@ -38,6 +38,8 @@ def get_list_of_contacts() -> list:
     except FileNotFoundError:
         with open('phoneBook.json', 'w') as phone_book:
             phone_book.write('[]')
+        with open('phoneBook.json', 'r') as phone_book:
+            contacts = list(json.load(phone_book))
     return [from_dict(contact) for contact in contacts]
 
 
