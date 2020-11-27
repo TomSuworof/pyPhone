@@ -32,4 +32,10 @@ examples of work: https://clck.ru/Ryepm
 git clone https://github.com/TomSuworof/pyPhone.git
 python pyPhone/main.py
 ```
-may be you should use ```python3 pyPhone/main.py```
+
+# Errors
+If in the proccess you got errors, check your python version
+```
+python
+```
+If you see ```Python 2.x.x```, you should use ```python3 pyPhone/main.py```
